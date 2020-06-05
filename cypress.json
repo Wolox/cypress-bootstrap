@@ -1,0 +1,6 @@
+{
+  "projectId": "<Your project ID>",
+  "env": {
+    "example": "1235"
+  }
+}
