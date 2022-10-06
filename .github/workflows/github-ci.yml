@@ -1,0 +1,13 @@
+name: Cypress Bootstrap CI/CD
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.17.0-chrome106
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run all tests
+        uses: cypress-io/github-action@v4
