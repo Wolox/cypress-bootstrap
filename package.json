@@ -1,33 +1,29 @@
 {
-  "name": "cypress-example",
+  "name": "cypress-cucumber",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Cypress bootstrap with TS and Cucumber",
   "scripts": {
-    "cypress": "cypress open",
-    "cypress-run": "cypress run",
-    "lint": "eslint ."
+    "cy:run": "cypress run --reporter junit",
+    "cy:run:headed": "cypress run --reporter junit --headed",
+    "cy:chrome:headed": "cypress run --reporter junit --browser chrome --headed",
+    "cy:chrome": "cypress run --reporter junit --browser chrome --headless",
+    "cy:open": "cypress open",
+    "cy:run:smoke": "cypress run --env tags=@smoke --headed"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "cypress": "^3.8.0",
-    "eslint": "^7.1.0"
+    "ts-loader": "9.3.1",
+    "typescript": "4.7.4",
+    "webpack": "5.74.0"
   },
-  "devDependencies": {
-    "@applitools/eyes.cypress": "^3.4.11",
-    "eslint-config-wolox": "^4.0.0",
-    "eslint-config-wolox-node": "^3.0.0",
-    "eslint-plugin-cypress": "^2.11.1",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "husky": "^4.2.5",
-    "prettier": "^2.0.5"
+  "devDependencies" : {
+    "cypress": "10.3.1",
+    "@badeball/cypress-cucumber-preprocessor": "12.0.0",
+    "@cypress/webpack-preprocessor": "5.12.0",
+    "cypress-cucumber-tagging": "^1.0.3"
+  },
+  "author": "Wolox Training",
+  "license": "MIT",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/test/step_definitions/**/*.{js,ts}"
   }
 }

@@ -1,31 +1,55 @@
-# Cypress example
-This is a cypress web e2e example. All the test are located in `/cypress/integration/`
-Feel free to edit the scripts in `package.json` file to run the tests.
+# 🌲 cypress-cucumber-typescript 
 
-For install the proyect use:
-  `npm install`
+This project is the base to start automating web applications with Cypress framework.
 
-## Visual Testing
-For config your visual testing use: `npx eyes-setup`
+#### 💾 Version
 
-Go to [applitools](https://eyes.applitools.com), create an account, sing in, go to profile icon and click over **My API key**, copy that key. 🕵🏾‍♀️ You will need it for set your `APPLITOOLS_API_KEY`
+* Cypress 10.3.1
+* Typescript 4.7.4
+* Cucumber-preprocessor 12.0.0
+* Node 14.18.0
+* Npm 6.14.15
 
-After that, you can set up the `APPLITOOLS_API_KEY` enviroment variable to allow run your visual test:
+## ⚙️ Installation
+Pre-requisite [node.](https://nodejs.org/)
 
-> in unix base systems you can use the folow command:
+Use the package manager [npm](https://www.npmjs.com/) to install
 
-`export APPLITOOLS_API_KEY=\YOUR_API_KEY`
+```bash
+npm install
+```
+## 🚀 Test execution
+Before running the test, please set a random user and in the cypress.env.json file. In a real project do NOT push this file to git.
 
-> Windows CMD
+You can create one at https://www.demoblaze.com/  --> "Sign Up" menu.
 
-`set APPLITOOLS_API_KEY="YOUR_API_KEY"`
-
-> Windows PowerShell
-
-` $env:APPLITOOLS_API_KEY="YOUR_API_KEY"`
+To run on Chrome download [Browser](https://www.google.com/intl/en/chrome/update/)
 
 
-## Runing the Tests
+```bash
+npm run cy:run 
+npm run cy:run:headed
+npm run cy:chrome
+npm run cy:chrome:headed
+npm run cy:open
+npm run cy:run:smoke
 
-For run the test you can use:
-  `npm run cypress`
+```
+
+## 💪🏼 Contributing
+1. Clone the repository
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Run the tests or make changes
+4. Commit your changes (git add . , Git commit -m "Add some feature")
+5. Push the branch (git push origin my-new-feature)
+6. Create a new pull request
+
+## ⚖️ License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## 📚 Information sources
+[Cypress](https://docs.cypress.io/)
+
+[Cucumber](https://cucumber.io/)
+
+[Typescript](https://www.typescriptlang.org/)
